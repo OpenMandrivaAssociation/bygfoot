@@ -53,7 +53,7 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files -f %{name}.lang
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc AUTHORS COPYING ChangeLog README TODO UPDATE ReleaseNotes
 %dir %{_datadir}/%{name}/support_files
 %dir %{_datadir}/%{name}/support_files/definitions
@@ -63,7 +63,8 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 %dir %{_datadir}/%{name}/support_files/pixmaps/live_game
 %dir %{_datadir}/%{name}/support_files/pixmaps/symbols
 %dir %{_datadir}/%{name}/support_files/strategy
-%attr(755,root,root) %{_bindir}/%{name}
+%dir %{_datadir}/%{name}/support_files/mmedia
+%{_bindir}/%{name}
 %{_datadir}/%{name}/support_files/bygfoot*
 %{_datadir}/%{name}/support_files/definitions/*/*.xml
 %{_datadir}/%{name}/support_files/lg_commentary/*.xml
@@ -71,5 +72,6 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/support_files/pixmaps/*.png
 %{_datadir}/%{name}/support_files/pixmaps/*/*.png
 %{_datadir}/%{name}/support_files/strategy/*.xml
+%{_datadir}/%{name}/support_files/mmedia/pics/*.jpg
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
