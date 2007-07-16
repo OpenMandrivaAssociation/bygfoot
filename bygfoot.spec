@@ -1,6 +1,6 @@
 Summary:	Bygfoot is a football (soccer) manager game
 Name:		bygfoot
-Version:	2.1.0
+Version:	2.2.0
 Release:	%mkrel 1
 License:	GPL
 Group:		Games/Sports
@@ -73,4 +73,3 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/support_files/strategy/*.xml
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-
