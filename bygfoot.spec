@@ -8,6 +8,7 @@ Url:		http://bygfoot.sourceforge.net
 Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}-source.tar.bz2
 Source1:	%{name}.desktop
 BuildRequires:	libgtk+2-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Bygfoot is a small and simple football (a.k.a. soccer) manager game
