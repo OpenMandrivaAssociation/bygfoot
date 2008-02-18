@@ -1,4 +1,4 @@
-Summary:	Bygfoot is a football (soccer) manager game
+Summary:	Football (soccer) manager game
 Name:		bygfoot
 Version:	2.2.0
 Release:	%mkrel 1
