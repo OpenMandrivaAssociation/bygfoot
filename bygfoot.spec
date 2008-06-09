@@ -37,17 +37,13 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
 %{update_menus}
-%if %mdkversion >= 200700
 %{update_desktop_database}
 %update_icon_cache hicolor
-%endif
 
 %postun
 %{clean_menus}
-%if %mdkversion >= 200700
 %{clean_desktop_database}
 %clean_icon_cache hicolor
-%endif
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
