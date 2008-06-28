@@ -1,13 +1,15 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
-Version:	2.2.0
-Release:	%mkrel 2
-License:	GPL
+Version:	2.2.1
+Release:	%mkrel 1
+License:	GPLv2+
 Group:		Games/Sports
 Url:		http://bygfoot.sourceforge.net
 Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}-source.tar.bz2
 Source1:	%{name}.desktop
+Patch0:		%{name}-2.2.1-gst-version.patch
 BuildRequires:	libgtk+2-devel
+BuildRequires:	gstreamer0.10-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -18,9 +20,17 @@ get promoted or relegated and of course try to be successful.
 
 %prep
 %setup -qn %{name}-%{version}-source
+%patch0 -p1
 
 %build
-%configure2_5x
+
+# (tpg) needed for patch0
+aclocal --force
+autoconf --force
+autoheader --force
+
+%configure2_5x \
+	--enable-gstreamer
 
 %make
 
@@ -54,7 +64,7 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc AUTHORS COPYING ChangeLog README TODO UPDATE ReleaseNotes
+%doc AUTHORS ChangeLog README TODO UPDATE ReleaseNotes
 %dir %{_datadir}/%{name}/support_files
 %dir %{_datadir}/%{name}/support_files/definitions
 %dir %{_datadir}/%{name}/support_files/lg_commentary
