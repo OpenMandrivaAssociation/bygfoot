@@ -1,11 +1,11 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
-Version:	2.2.1
+Version:	2.3.0
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Sports
 Url:		http://bygfoot.sourceforge.net
-Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}-source.tar.bz2
+Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}.tar.bz2
 Source1:	%{name}.desktop
 Patch0:		%{name}-2.2.1-gst-version.patch
 BuildRequires:	libgtk+2-devel
@@ -19,7 +19,7 @@ team from one such league: you form the team, buy and sell players,
 get promoted or relegated and of course try to be successful.
 
 %prep
-%setup -qn %{name}-%{version}-source
+%setup -qn %{name}-%{version}
 %patch0 -p1
 
 %build
