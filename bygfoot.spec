@@ -1,6 +1,6 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
-Version:	2.3.0
+Version:	2.3.2
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Sports
@@ -65,23 +65,7 @@ install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog README TODO UPDATE ReleaseNotes
-%dir %{_datadir}/%{name}/support_files
-%dir %{_datadir}/%{name}/support_files/definitions
-%dir %{_datadir}/%{name}/support_files/lg_commentary
-%dir %{_datadir}/%{name}/support_files/names
-%dir %{_datadir}/%{name}/support_files/pixmaps/history
-%dir %{_datadir}/%{name}/support_files/pixmaps/live_game
-%dir %{_datadir}/%{name}/support_files/pixmaps/symbols
-%dir %{_datadir}/%{name}/support_files/strategy
-%dir %{_datadir}/%{name}/support_files/mmedia
 %{_bindir}/%{name}
-%{_datadir}/%{name}/support_files/bygfoot*
-%{_datadir}/%{name}/support_files/definitions/*/*.xml
-%{_datadir}/%{name}/support_files/lg_commentary/*.xml
-%{_datadir}/%{name}/support_files/names/*.xml
-%{_datadir}/%{name}/support_files/pixmaps/*.png
-%{_datadir}/%{name}/support_files/pixmaps/*/*.png
-%{_datadir}/%{name}/support_files/strategy/*.xml
-%{_datadir}/%{name}/support_files/mmedia/pics/*.jpg
+%{_datadir}/%{name}
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
