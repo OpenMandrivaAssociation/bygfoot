@@ -1,7 +1,7 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
 Version:	2.3.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPLv2+
 Group:		Games/Sports
 Url:		http://bygfoot.sourceforge.net
@@ -23,8 +23,6 @@ get promoted or relegated and of course try to be successful.
 %patch0 -p1
 
 %build
-
-# (tpg) needed for patch0
 aclocal --force
 autoconf --force
 autoheader --force
@@ -40,8 +38,8 @@ autoheader --force
 %makeinstall_std
 mkdir -p %{buildroot}%{_datadir}/{pixmaps,applications}
 
-install support_files/pixmaps/bygfoot_icon.png %{buildroot}%{_datadir}/pixmaps/bygfoot.png
-install %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
+install -m 0644 support_files/pixmaps/bygfoot_icon.png %{buildroot}%{_datadir}/pixmaps/bygfoot.png
+install -m 0644 %{SOURCE1} %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %find_lang %{name}
 
