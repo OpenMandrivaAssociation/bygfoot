@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Bygfoot
+Comment=A football manager
+Exec=bygfoot
+Icon=bygfoot
+Type=Application
+Terminal=false
+Categories=Game;SportsGame;
