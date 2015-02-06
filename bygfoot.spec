@@ -1,7 +1,7 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
 Version:	2.3.2
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		Games/Sports
 Url:		http://bygfoot.sourceforge.net
