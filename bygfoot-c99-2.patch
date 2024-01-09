@@ -1,0 +1,18 @@
+commit 7c2f20b139a1497e7d2aecd645d4cae53a8ce07a
+Author: Tom Stellard <tom@stellard.net>
+Date:   Sun Jul 31 16:14:07 2022 -0700
+
+    Fix implicit-function-declaration warning
+
+diff --git a/src/start_end.c b/src/start_end.c
+index c3b4a467f812d50d..861959d5536b14f9 100644
+--- a/src/start_end.c
++++ b/src/start_end.c
+@@ -49,6 +49,7 @@
+ #include "transfer.h"
+ #include "user.h"
+ #include "variables.h"
++#include "xml_country.h"
+ #include "xml_name.h"
+ #include "youth_academy.h"
+ 

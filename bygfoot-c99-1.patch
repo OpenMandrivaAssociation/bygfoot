@@ -1,0 +1,19 @@
+commit 7dfabf380c0c63d3c5df0b773f76a1572789573a
+Author: Tom Stellard <tom@stellard.net>
+Date:   Sun Jul 31 16:02:44 2022 -0700
+
+    Fix implicit-int warning
+
+diff --git a/src/start_end.c b/src/start_end.c
+index d18d59e704991ae6..c3b4a467f812d50d 100644
+--- a/src/start_end.c
++++ b/src/start_end.c
+@@ -100,7 +100,7 @@ start_new_game(void)
+ /** callback function for start_load_other_countries to load countries and
+  * add them to the country_list.
+  */
+-static load_country(gpointer country_file, gpointer user_data)
++static void load_country(gpointer country_file, gpointer user_data)
+ {
+ 
+     GPtrArray *country_list = (GPtrArray*)user_data;
