@@ -13,7 +13,7 @@ Patch0:         bygfoot-c99-1.patch
 Patch1:         bygfoot-c99-2.patch
 BuildRequires:  cmake ninja
 BuildRequires:	gettext
-#BuildRequires:	pkgconfig(gstreamer-0.10)
+BuildRequires:	imagemagick
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:  pkgconfig(json-c)
 
