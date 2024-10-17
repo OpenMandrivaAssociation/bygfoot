@@ -4,7 +4,7 @@ Version:	2.3.5
 Release:	1
 License:	GPLv2+
 Group:		Games/Sports
-Url:		http://bygfoot.sourceforge.net
+Url:		https://bygfoot.sourceforge.net
 Source0:        https://gitlab.com/bygfoot/bygfoot/-/archive/%{version}/bygfoot-%{version}.tar.bz2
 #Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}.tar.bz2
 #Source1:	%{name}.desktop
