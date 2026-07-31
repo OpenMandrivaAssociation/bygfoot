@@ -1,6 +1,6 @@
 Summary:	Football (soccer) manager game
 Name:		bygfoot
-Version:	2.3.5
+Version:	3.0.0
 Release:	1
 License:	GPLv2+
 Group:		Games/Sports
@@ -9,8 +9,8 @@ Source0:        https://gitlab.com/bygfoot/bygfoot/-/archive/%{version}/bygfoot-
 #Source0:	http://downloads.sourceforge.net/bygfoot/%{name}-%{version}.tar.bz2
 #Source1:	%{name}.desktop
 #Patch0:		%{name}-2.2.1-gst-version.patch
-Patch0:         bygfoot-c99-1.patch
-Patch1:         bygfoot-c99-2.patch
+# dropped (no longer applies): Patch0:         bygfoot-c99-1.patch
+# dropped (no longer applies): Patch1:         bygfoot-c99-2.patch
 BuildRequires:  cmake ninja
 BuildRequires:	gettext
 BuildRequires:	imagemagick
